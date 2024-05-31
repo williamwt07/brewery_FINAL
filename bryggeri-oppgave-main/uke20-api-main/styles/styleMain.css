@@ -1,0 +1,124 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    padding: .5rem;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+}
+.header_main{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px;
+    background-color: rgba(255, 255, 255, 1.0);
+    align-items: center;
+}
+
+.header_main #menu_header{
+    grid-column: 1;
+}
+.header_main #menu_header ul{
+    display: flex;
+    list-style: none;
+    padding: 2rem;
+}
+.header_main #menu_header ul li{
+    padding: 1rem;
+    font-size: 1.9rem ;
+}
+.header_main #menu_bar{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    
+    display: flex;
+    justify-content:center;
+
+}
+.header_main #menu_bar input{
+
+    width:20rem;
+    height: auto;    
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.header_main #menu_bar p{
+
+    font-size: 1.5rem;
+}
+.header_main #logo_main{
+    grid-column: 3;
+    padding: 2rem;
+    text-align: center;
+
+}
+.main_main{
+    grid-column-start:2;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+
+}
+.main_main #info{
+    padding: 20%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000;
+}
+.main_main #map1{
+    height: 40%;
+    width: auto;
+    aspect-ratio: 1/1;
+}
+.main_main #map iframe{
+    width: 50%;
+    height: auto;
+    aspect-ratio: 1;
+}
+
+
+.header_main #menu_bar {
+    display: flex;
+    align-items: center;
+}
+
+.header_main #menu_bar select, .header_main #menu_bar input {
+    margin-right: 10px; /* Adjust as needed */
+}
+
+.header_main #menu_bar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+footer {
+    grid-area: footer;
+    height: 120px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    text-align: center;
+}
+
+footer img {
+    width: 50px;
+    height: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}

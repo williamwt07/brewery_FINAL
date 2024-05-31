@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <!--Linke til forskjellige ting som CSS dokumenter vår og forskjellige fonter.-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styleMain.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    
+    <title>Brewmap</title>
+</head>
+<body>
+    <header class="header_main">
+        <div id="menu_bar">
+            <select id="stateDropdown"> <!--Drop down meny-->
+                <option value="1">Select a state</option>
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Arkansas">Arkansas</option>
+                <option value="California">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Connecticut">Connecticut</option>
+                <option value="Delaware">Delaware</option>
+                <option value="Florida">Florida</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Hawaii">Hawaii</option>
+                <option value="Idaho">Idaho</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Indiana">Indiana</option>
+                <option value="Iowa">Iowa</option>
+                <option value="Kansas">Kansas</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="Louisiana">Louisiana</option>
+                <option value="Maine">Maine</option>
+                <option value="Maryland">Maryland</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Minnesota">Minnesota</option>
+                <option value="Mississippi">Mississippi</option>
+                <option value="Missouri">Missouri</option>
+                <option value="Montana">Montana</option>
+                <option value="Nebraska">Nebraska</option>
+                <option value="Nevada">Nevada</option>
+                <option value="New Hampshire">New Hampshire</option>
+                <option value="New Jersey">New Jersey</option>
+                <option value="New Mexico">New Mexico</option>
+                <option value="New York">New York</option>
+                <option value="North Carolina">North Carolina</option>
+                <option value="North Dakota">North Dakota</option>
+                <option value="Ohio">Ohio</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="Rhode Island">Rhode Island</option>
+                <option value="South Carolina">South Carolina</option>
+                <option value="South Dakota">South Dakota</option>
+                <option value="Tennessee">Tennessee</option>
+                <option value="Texas">Texas</option>
+                <option value="Utah">Utah</option>
+                <option value="Vermont">Vermont</option>
+                <option value="Virginia">Virginia</option>
+                <option value="Washington">Washington</option>
+                <option value="West Virginia">West Virginia</option>
+                <option value="Wisconsin">Wisconsin</option>
+                <option value="Wyoming">Wyoming</option>
+            </select>
+
+            <div id="sokebar">
+                <input id="searchbar" type="text" placeholder=" Search by city, postal code, address etc." name="searchbar">
+                <button type="submit" onclick="show_me()"><p><i class="fa-solid fa-magnifying-glass"></i></p></button>
+            <!--gjør at "button enter city name" har en id som tilkaller til JS scriptet, f.eks. id= "btn"-->   
+            </div>            
+        </div>
+    </header>
+    
+    <section class="main_main">
+        <div id="map1"></div>
+        <!-- <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8038.213638376258!2d10.11078308020771!3d59.7568693971846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464123a389ad4975%3A0x1e284166b46e0fa6!2s%C3%85ssiden%20videreg%C3%A5ende%20skole!5e0!3m2!1sno!2sno!4v1715067126066!5m2!1sno!2sno"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> -->
+        <div id="info">
+            <h1>Welcome to Brewmap</h1>
+            <p>Your ultimate guide to discovering breweries, cideries, brewpubs, and bottleshops. Powered by Open Brewery DB, BrewMap provides free access to a comprehensive dataset and API with public information on all your favorite craft beverage destinations.</p>
+        </div>
+    </section>
+    <footer> 
+        <div class="footer-content">
+            <div class="left">
+                <h2>Ta en titt på arbeidet mitt!</h2>
+                <a href="https://github.com/williamwt07">
+                    <img src="bilder/github_logo.webp" alt="Håndtegnet logo fra github">
+                </a>
+            </div>
+            <div class="right">
+                <h2>Send meg gjerne en mail!</h2>
+                <a href="mailto:williamtorgersen1@gmail.com">
+                    <img src="bilder/konvolutt.png" alt="Håndtegnet logo av en konvolutt">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!--script for at javascript skal funke-->
+    <script src="code/menu.js"></script>
+</body>
+</html>
